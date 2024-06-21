@@ -5,8 +5,8 @@ LABEL version="1.0"
 LABEL description="Imagen Apache sobre Bookworn"
 LABEL vendor="Jhoncy Tech"
 
-ENV PHP_VERSION=${PHP_VERSION:-7.4}
 ENV APACHE_VERSION=${APACHE_VERSION:-2.4}
+ENV PHP_VERSION=${PHP_VERSION:-7.4}
 
 RUN apt-get -y update && apt-get -y install apt-transport-https ca-certificates lsb-release gnupg wget && \
     echo "deb http://deb.debian.org/debian $(lsb_release -sc) main contrib non-free" > /etc/apt/sources.list.d/backports.list && \
